@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 960px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-container {
+    width: 300px;
+    padding: 10px 0;
+    float: right;
+
+    text-align: center;
+}
+
+.user-form {
+    font-size: 0;
+}
+
+.btn {
+    width: 130px;
+    height: 40px;
+
+    font-size: 18px;
+
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 0 #eee;
+    outline: none;
+}
+
+.user-form > button {
+    margin: 0 10px;
+}
+
+.btn:hover {
+    background-color: #fffeee;
+    cursor: pointer;
+}
+
+.login-container {
+    width: 450px;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form {
+    padding: 40px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0 10px 30px 5px #eee;
+}
+
+.login-form__header {
+    margin-top: 0;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 18px;
+}
+
+.login-form label + input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+
+    font-size: 18px;
+}
+
+.login-form__password {
+    margin-top: 20px;
+}
+
+.login-form__submit-btn {
+    margin-top: 20px;
+}
+
+input[type=submit] {
+    float: left;
+}
+
+.login-form__forget-password {
+    float: right;
+    height: 40px;
+    padding-right: 10px;
+}
+
+.login-form__forget-password > a {
+    display: inline;
+
+    line-height: 40px;
+}
+
+.signup-container {
+    width: 600px;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.signup-form {
+    padding: 40px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0 10px 30px 5px #eee;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 18px;
+}
+
+.signup-form label + input,
+.signup-form label + select,
+.signup-form label + textarea {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+
+    font-size: 18px;
+}
+
+sup {
+    color: red;
+}
+
+.signup-form__person-name-container {
+    position: relative;
+
+    font-size: 0;
+}
+
+.signup-form__person-name-container > * {
+    display: inline-block;
+    width: 249px;
+    margin-bottom: 5px;
+}
+
+.signup-form__person-name {
+    margin-right: 20px;
+}
+
+.signup-form__contact-container {
+    position: relative;
+
+    margin-top: 20px;
+
+    font-size: 0;
+}
+
+.signup-form__contact-container > * {
+    display: inline-block;
+    width: 330px;
+    margin-bottom: 5px;
+}
+
+.signup-form__password-container {
+    position: relative;
+
+    margin-top: 20px;
+
+    font-size: 0;
+}
+
+.signup-form__password-container > * {
+    display: inline-block;
+    width: 330px;
+    margin-bottom: 5px;
+}
+
+.signup-form__about-container {
+    margin-top: 20px;
+
+    font-size: 0;
+}
+
+.signup-form__about-container > * {
+    display: inline-block;
+    width: 249px;
+    margin-bottom: 5px;
+}
+
+.signup-form__gender {
+    margin-right: 20px;
+}
+
+.signup-form__gender label + select {
+    background-color: white;
+}
+
+.signup-form__about {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.signup-form label + textarea {
+    height: 80px;
+    padding: 10px;
+    resize: none;
+}
+
+.signup-form input[type="submit"] {
+    width: 200px;
+    margin-top: 15px;
+}
+
+.signup-form__empty-person-name,
+.signup-form__empty-email,
+.signup-form__empty-password,
+.signup-form__wrong-password {
+    position: absolute;
+
+    font-size: 14px;
+    color: #e00;
+}
+
+.signup-form__empty-person-name {
+    top: 106px;
+    right: -30px;
+}
+
+.signup-form__empty-email {
+    top: 36px;
+    left: 340px;
+}
+
+.signup-form__empty-password {
+    top: 36px;
+    left: 340px;
+}
+
+.signup-form__wrong-password {
+    top: 106px;
+    left: 340px;
+}
+
+.signup-form__empty-person-name--hidden,
+.signup-form__empty-email--hidden,
+.signup-form__empty-password--hidden,
+.signup-form__wrong-password--hidden {
+    display: none;
+}

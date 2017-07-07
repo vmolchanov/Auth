@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="signup-container">
+        <form action="/signup" class="signup-form clearfix" method="POST">
+            <div class="signup-form__person-name-container">
+                <div class="signup-form__person-name">
+                    <label for="name">Имя<sup>*</sup></label>
+                    <input id="name" name="name" type="text">
+                </div>
+                <div class="signup-form__person-surname">
+                    <label for="surname">Фамилия<sup>*</sup></label>
+                    <input id="surname" name="surname" type="text">
+                </div>
+                <div class="signup-form__person-middlename">
+                    <label for="middlename">Отчество</label>
+                    <input id="middlename" name="middlename" type="text">
+                </div>
+                <span class="signup-form__empty-person-name signup-form__empty-person-name--hidden">Необходимо заполнить поле</span>
+            </div>
+
+            <div class="signup-form__contact-container">
+                <div class="signup-form__email">
+                    <label for="email">E-mail<sup>*</sup></label>
+                    <input id="email" name="email" type="email">
+                </div>
+                <div class="signup-form__phone">
+                    <label for="phone">Телефон</label>
+                    <input id="phone" name="phone" type="tel">
+                </div>
+                <span class="signup-form__empty-email signup-form__empty-email--hidden">Необходимо заполнить поле</span>
+            </div>
+
+            <div class="signup-form__password-container">
+                <div class="signup-form__set-password">
+                    <label for="password">Придумайте пароль<sup>*</sup></label>
+                    <input id="password" name="password" type="password">
+                </div>
+                <div class="signup-form__repeat-password">
+                    <label for="repeat-password">Повторите пароль<sup>*</sup></label>
+                    <input id="repeat-password" name="repeat-password" type="password">
+                </div>
+                <span class="signup-form__empty-password signup-form__empty-password--hidden">Необходимо заполнить поле</span>
+                <span class="signup-form__wrong-password signup-form__wrong-password--hidden">Неправильный пароль</span>
+            </div>
+
+            <div class="signup-form__about-container">
+                <div class="signup-form__gender">
+                    <label for="gender">Пол</label>
+                    <select id="gender" name="gender">
+                        <option value="no-choice">Не выбрано</option>
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                    </select>
+                </div>
+                <div class="signup-form__birthday">
+                    <label for="birthday">Дата рождения</label>
+                    <input id="birthday" type="date">
+                </div>
+            </div>
+
+            <div class="signup-form__about">
+                <label for="about">О себе</label>
+                <textarea name="about" id="about" cols="30" rows="10"></textarea>
+            </div>
+
+            <input class="btn" type="submit" value="Зарегестрироваться">
+        </form>
+    </div>
+</div>
+
+<script src="js/signup.js"></script>
