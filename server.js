@@ -12,6 +12,7 @@ const handlebars = require("express-handlebars").create({ defaultLayout: "index"
 const mainPageController = require("./controllers/mainPageController");
 const loginController = require("./controllers/loginController");
 const signupController = require("./controllers/signupController");
+const registrationController = require("./controllers/registrationController");
 
 app.use(express.static('public'));
 app.use(cookieParser());
@@ -54,5 +55,6 @@ const auth = passport.authenticate(
 app.get("/", mainPageController);
 app.get("/login", loginController);
 app.get("/signup", signupController);
+app.post("/signup", registrationController);
 
 app.listen(8080, () => console.log("Server is listening..."));

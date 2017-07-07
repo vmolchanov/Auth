@@ -144,6 +144,8 @@ input[type=submit] {
     padding: 0 10px;
 
     font-size: 18px;
+
+    border: 1px solid #ccc;
 }
 
 sup {
@@ -232,6 +234,7 @@ sup {
 
 .signup-form__empty-person-name,
 .signup-form__empty-email,
+.signup-form__invalid-email,
 .signup-form__empty-password,
 .signup-form__wrong-password {
     position: absolute;
@@ -245,7 +248,8 @@ sup {
     right: -30px;
 }
 
-.signup-form__empty-email {
+.signup-form__empty-email,
+.signup-form__invalid-email {
     top: 36px;
     left: 340px;
 }
@@ -262,6 +266,7 @@ sup {
 
 .signup-form__empty-person-name--hidden,
 .signup-form__empty-email--hidden,
+.signup-form__invalid-email--hidden,
 .signup-form__empty-password--hidden,
 .signup-form__wrong-password--hidden {
     display: none;
