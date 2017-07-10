@@ -1,4 +1,7 @@
+const config = require("./config/config")
+
 const express = require("express");
+
 const app = express();
 
 const path = require("path");
@@ -13,6 +16,7 @@ const mainPageController = require("./controllers/mainPageController");
 const loginController = require("./controllers/loginController");
 const signupController = require("./controllers/signupController");
 const registrationController = require("./controllers/registrationController");
+const successfulSignupController = require("./controllers/successfulSignupController");
 
 app.use(express.static('public'));
 app.use(cookieParser());
@@ -56,5 +60,7 @@ app.get("/", mainPageController);
 app.get("/login", loginController);
 app.get("/signup", signupController);
 app.post("/signup", registrationController);
+app.get("/regsuc", successfulSignupController);
 
-app.listen(8080, () => console.log("Server is listening..."));
+app.listen(config.port, () => console.log("Server is listening..."));
+
