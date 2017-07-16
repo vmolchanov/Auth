@@ -17,6 +17,7 @@ const mainPageController = require("./controllers/mainPageController");
 const loginController = require("./controllers/loginController");
 const signupController = require("./controllers/signupController");
 const successfulSignupController = require("./controllers/successfulSignupController");
+const userController = require("./controllers/userController");
 
 const UserModel = require("./models/userModel").UserModel;
 
@@ -53,11 +54,11 @@ passport.use(new LocalStrategy((username, password, done) => {
 }));
 
 passport.serializeUser((user, done) => {
-    done(null, user.name);
+    done(null, user._id);
 });
 
 passport.deserializeUser((id, done) => {
-    done(null, { username: id });
+    done(null, { id: id });
 });
 
 const auth = passport.authenticate(
@@ -79,7 +80,7 @@ const mustBeAuthenticated = (req, res, next) => req.isAuthenticated() ? next() :
 
 app.all("/user", mustBeAuthenticated);
 
-app.get("/user", (req, res) => res.send("User"));
+app.get("/user", userController);
 
 app.get("/logout", (req, res) => {
     req.logout();
