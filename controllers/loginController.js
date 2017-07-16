@@ -1,4 +1,7 @@
 module.exports = (req, res) => {
-    console.log(req.method);
-    res.render("login", { scriptPath: "js/login.js" });
+    switch (req.method) {
+        case "GET":
+            res.render("login", {scriptPath: "js/login.js"});
+            break;
+    }
 };

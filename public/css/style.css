@@ -86,6 +86,8 @@ body {
     padding: 0 10px;
 
     font-size: 18px;
+
+    border: 1px solid #ccc;
 }
 
 .login-form__password {
@@ -110,6 +112,11 @@ input[type=submit] {
     display: inline;
 
     line-height: 40px;
+}
+
+.login-form label + .login-form__username-input--invalid,
+.login-form label + .login-form__password-input--invalid {
+    border-color: #e00;
 }
 
 .signup-container {
